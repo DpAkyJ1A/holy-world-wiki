@@ -1,3 +1,153 @@
-.root{
-    color: #fff;
+.header{
+    height: 129px;
+    width: 100%;
+    padding-top: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeLink {
+    text-decoration: none;
+    color: black;
+}
+
+.appName {
+    color: #000;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.whiteWrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 34px;
+    background-color: white;
+}
+
+.onlineWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.online {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+.onlineValue {
+    color: #000;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+
+    margin-left: 16px;
+}
+
+.onlineBar {
+    width: 100%;
+    border-radius: 14px;
+    height: 4px;
+    background: #deebfe;
+}
+
+.onlineBarFill {
+    border-radius: 14px;
+    height: 4px;
+    width: 0;
+    background: radial-gradient(96.48% 1501.08% at 1.76% 11.81%,#14a6fc 0,#1477f8 100%);
+}
+
+.serverIp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+    width: 269px;
+    height: 73px;
+}
+
+.serverIp::before {
+    background: #e9f0fa;
+    border-radius: 33px;
+    bottom: 0;
+    content: "";
+    height: 217px;
+    position: absolute;
+    width: 100%;
+}
+
+.serverIp span {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    z-index: 10;
+}
+
+.serverIpValue {
+    display: flex;
+    gap: 3px;
+    z-index: 10;
+}
+
+.serverIpValue p {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.fireIcon {
+    width: 22px;
+    height: 22px;
+    background-image: url('../../assets/icons/fire.svg');
+    margin-top: -3px;
+}
+
+@media screen and (max-width: 1440px) {
+    .header {
+        height: 109px;
+    }
+    .whiteWrapper {
+        background-color: transparent;
+    }
+    .whiteWrapper a {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 69px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .whiteWrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .serverIp {
+        display: none;
+    }
 }

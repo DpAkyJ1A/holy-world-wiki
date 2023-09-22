@@ -1,20 +1,28 @@
 import React from 'react'
 import styles from './home.module.css'
-import { Button, Inputs, Modal, ToolTip } from '@/components'
-import { Header, Footer, Navbar } from '@/layout'
+import { Header, Links, Navigator, Article, Footer } from '@/layout';
+import { GameModeButton } from '@/components';
 
-const index = () => {
+const index = ({ sectionData }) => {
   return (
-    <div className={styles.root}>
-      <Header />
-      Home Pag
-      <br/>
-      {/* <Button/>
-      <Inputs/>
-      <Modal/>
-      <ToolTip/> */}
-    </div>
-  )
-}
+    <>
+      <div className={styles.maxContainer}>
+        <Header />
+        <Links />
+        <main className={styles.main}>
+          <div className={styles.column}>
+            <div className={styles.whiteWrapper}>
+              <GameModeButton gameMode="classicAndSpeedrun" />
+              <GameModeButton gameMode="liteAnarchy" />
+            </div>
+            <Navigator sectionData={sectionData} />
+          </div>
+          <Article sectionData={sectionData} />
+        </main>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default index

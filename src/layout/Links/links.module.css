@@ -1,0 +1,203 @@
+.links {
+    position: relative;
+    width: 100%;
+    height: 368px;
+    border-radius: 54px;
+}
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 54px;
+    overflow: hidden;
+}
+
+.img {
+    width: 2000px;
+    height: 1076px;
+    background-image: url('../../assets/img/server.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 54px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: background-position 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.fadeOut {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 54px;
+    position: absolute;
+    z-index: 1;
+}
+
+.logo {
+    width: 368px;
+    height: 368px;
+    background-image: url('../../assets/img/logo.png');
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.link {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 13.5px;
+    padding: 0 14px;
+
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.tgLink {
+    left: 55px;
+}
+
+.vkLink {
+    flex-direction: row-reverse;
+    right: 55px;
+}
+
+.telegramIcon, .vkIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.telegramIcon {
+    background-image: url('../../assets/icons/tg-logo.svg');
+}
+
+.vkIcon {
+    background-image: url('../../assets/icons/vk-logo.svg');
+}
+
+.vkColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.linkValue {
+    color: #fff;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 27px;
+    letter-spacing: 0.55px;
+}
+
+.subsCount {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.tgLink:hover .telegramIcon,
+.vkLink:hover .vkIcon {
+    animation-name: jump;
+    animation-duration: 0.3s;
+}
+
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .links {
+        height: 330px;
+    }
+    .logo {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 250px;
+        height: 250px;
+    }
+    .tgLink {
+        left: 0;
+    }
+    .vkLink {
+        right: 0;
+    }
+    .img {
+        width: 1600px;
+        height: 860px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .tgLink {
+        left: 10px;
+        top: unset;
+        right: unset;
+        bottom: 10px;
+        transform: unset;
+    }
+    .vkLink {
+        left: unset;
+        right: 10px;
+        bottom: unset;
+        top: 10px;
+        transform: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+        width: 1200px;
+        height: 645px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .img {
+        width: 1000px;
+        height: 538px;
+    }
+    .linkValue {
+        font-size: 16px;
+    }
+}
