@@ -115,6 +115,8 @@ const Article = ({ sectionData }) => {
                 >
                   {el.value}
                 </Link>
+              ) : el.element === 'hr' ? (
+                <hr></hr>
               ) : (
                 <></>
               )
