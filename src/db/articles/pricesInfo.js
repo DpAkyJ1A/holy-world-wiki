@@ -1,5 +1,6 @@
-// import endlessTrading from '../../assets/img/endless-trading.jpg';
-// import endlessTradingMenu from '../../assets/img/endless-trading-menu.jpg';
+import pricesInfo1 from '../../assets/img/prices-info-1.png';
+import pricesInfo2 from '../../assets/img/prices-info-2.png';
+import pricesInfo3 from '../../assets/img/prices-info-3.png';
 
 export const PRICESINFO = {
   articleName: 'Информация о всех ценах в Бесконечной Торговле',
@@ -14,6 +15,12 @@ export const PRICESINFO = {
       value: '1) Возможные предметы, которые могут быть артефактом:',
     },
     {
+      element: 'img',
+      src: pricesInfo1,
+      alt: 'Возможные артефакты',
+      style: { width: '100%' },
+    },
+    {
       element: 'p',
       value:
         'Спавнер ифритов, Спавнер зомби, Спавнер скелетов, Спавнер пауков, Спавнер пещерных пауков, Незеритовый блок, Трезубец, Элитра, Голова крипера, Голова зомби, Череп скелета, Голова дракона, Зачарованное золотое яблоко.',
@@ -21,6 +28,12 @@ export const PRICESINFO = {
     {
       element: 'p',
       value: '2) <b>Возможные необходимые предметы для топлива</b>:',
+    },
+    {
+      element: 'img',
+      src: pricesInfo2,
+      alt: 'Предметы для топлива',
+      style: { width: '100%' },
     },
     {
       element: 'p',
@@ -31,6 +44,12 @@ export const PRICESINFO = {
       element: 'p',
       value:
         '3) Также стоит добавить, что при каждом проданном стаке цена падает на 1% от цены.',
+    },
+    {
+      element: 'img',
+      src: pricesInfo3,
+      alt: 'Падение цены',
+      style: { width: '100%' },
     },
     {
       element: 'p',

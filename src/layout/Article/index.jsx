@@ -87,9 +87,12 @@ const Article = ({ sectionData }) => {
                   ></h4>
                 )
               ) : el.element === 'ol' ? (
-                <ol className={styles.ol} key={`article element ${i}`}>
+                <ol className={styles.ol} key={`article element ${i}`} >
                   {el.li.map((str) => (
-                    <li key={str}>{str}</li>
+                    <li
+                      key={str}
+                      dangerouslySetInnerHTML={{ __html: str }}
+                    ></li>
                   ))}
                 </ol>
               ) : el.element === 'ul' ? (

@@ -69,7 +69,7 @@
 }
 
 .ol, .ul {
-    margin-left: 20px;
+    margin-left: 36px;
     color: #000;
 
     font-size: 20px;
@@ -81,6 +81,10 @@
     flex-direction: column;
     gap: 10px;
 }
+
+/* .ol li:nth-child(n + 10) {
+    margin-left: 12px;
+} */
 
 .row {
     display: flex;

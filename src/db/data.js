@@ -1,10 +1,14 @@
 import { BOSSES } from './articles/bosses';
 import { BOURGEOISDESCRIPTION } from './articles/bourgeoisDescription';
+import { CHALLENGESDESCRIPTION } from './articles/challengesDescription';
 import { CLANS } from './articles/clans';
+import { COINSFROMMOBS } from './articles/coinsFromMobs';
 import { ENDLESSTRADING } from './articles/endlessTrading';
 import { EVENTSCHEDULE } from './articles/eventSchedule';
 import { PRICESINFO } from './articles/pricesInfo';
 import { SANCTUOUSJACOB } from './articles/sanctuousJacob';
+import { SPAWNERS } from './articles/spawners';
+import { UNIQUEDUNGEONS } from './articles/uniqueDungeons';
 
 export const HolyWorldWikiHome = {
   baseAddress: '/',
@@ -81,80 +85,28 @@ export const classicAndSpeedrun = {
           sectionName: 'Уникальные данжи',
           sectionAddress: '/unique_dungeons',
           articles: [
-            {
-              articleName: 'Уникальные данжи',
-              articleAddress: '/unique_dungeons',
-              articleData: [
-                {
-                  subHeader: 'Чета про Уникальный данж',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-                {
-                  subHeader: 'SubHeader2',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-              ],
-            },
+            UNIQUEDUNGEONS
           ],
         },
         {
           sectionName: 'Рассадники',
           sectionAddress: '/spawners',
           articles: [
-            {
-              articleName: 'Рассадники',
-              articleAddress: '/spawners',
-              articleData: [
-                {
-                  subHeader: 'Чета про рассадники',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-                {
-                  subHeader: 'SubHeader2',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-              ],
-            },
+            SPAWNERS,
           ],
         },
         {
           sectionName: 'Мобы и монетки',
           sectionAddress: '/mobs_and_coins',
           articles: [
-            {
-              articleName: 'Мобы и монетки',
-              articleAddress: '/mobs_and_coins',
-              articleData: [
-                {
-                  subHeader: 'Чета про Мобы и монетки',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-                {
-                  subHeader: 'SubHeader2',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-              ],
-            },
+            COINSFROMMOBS,
           ],
         },
         {
           sectionName: 'Боевой пропуск',
           sectionAddress: '/battle_pass',
           articles: [
-            {
-              articleName: 'Боевой пропуск',
-              articleAddress: '/battle_pass',
-              articleData: [
-                {
-                  subHeader: 'Чета про Боевой пропуск',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-                {
-                  subHeader: 'SubHeader2',
-                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. ',
-                },
-              ],
-            },
+            CHALLENGESDESCRIPTION,
           ],
         },
       ],
