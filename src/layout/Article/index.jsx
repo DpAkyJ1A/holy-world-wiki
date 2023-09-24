@@ -35,8 +35,8 @@ const Article = ({ sectionData }) => {
   }
 
   return (
-    <article className={styles.article}>
-      <h2 id="articleName" className={styles.articleName}>
+    <article id="article" className={styles.article}>
+      <h2 id="article-name" className={styles.articleName}>
         {article.articleName}
       </h2>
       {article.articleContent && <hr></hr>}
@@ -87,7 +87,7 @@ const Article = ({ sectionData }) => {
                   ></h4>
                 )
               ) : el.element === 'ol' ? (
-                <ol className={styles.ol} key={`article element ${i}`} >
+                <ol className={styles.ol} key={`article element ${i}`}>
                   {el.li.map((str) => (
                     <li
                       key={str}

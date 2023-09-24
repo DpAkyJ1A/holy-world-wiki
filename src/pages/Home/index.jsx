@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './home.module.css'
 import { Header, Links, Navigator, Article, Footer } from '@/layout';
-import { GameModeButton } from '@/components';
+import { GameModeButton, ScrollToTopButton } from '@/components';
 
 const index = ({ sectionData }) => {
   return (
@@ -21,6 +21,7 @@ const index = ({ sectionData }) => {
         </main>
       </div>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 };

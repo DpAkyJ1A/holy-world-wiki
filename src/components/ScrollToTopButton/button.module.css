@@ -1,0 +1,36 @@
+.btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 50px;
+  right: 50px;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #deebfe;
+  opacity: 0.6;
+  cursor: pointer;
+
+  display: none;
+
+  background-image: url('../../assets/icons/chevron-up-outline.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+
+.visible {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+          bottom: 30px;
+          right: 30px;
+
+          width: 50px;
+          height: 50px;
+    }
+}
