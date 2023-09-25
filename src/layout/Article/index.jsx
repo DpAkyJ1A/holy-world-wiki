@@ -6,9 +6,11 @@ import { scrollToTop } from '@/utils/helpers/helpers';
 
 const Article = ({ sectionData }) => {
   const [article, setArticle] = useState(null);
+  const [copied, setCopied] = useState(false);
   const curLocation = useLocation();
 
   useEffect(() => {
+    setCopied(false);
     if (curLocation.pathname === sectionData.baseAddress) {
       setArticle(sectionData.homePage);
     } else {
@@ -128,6 +130,16 @@ const Article = ({ sectionData }) => {
                 <p className={styles.sectionText}>{el.text}</p>
               </section>
             ))}
+        <hr></hr>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            navigator.clipboard.writeText(window.location.href);
+            setCopied(true);
+          }}
+        >
+          <span className={copied && styles.copied}></span>Link
+        </button>
       </div>
     </article>
   );

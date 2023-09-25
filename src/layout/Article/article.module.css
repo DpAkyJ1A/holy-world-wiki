@@ -132,6 +132,54 @@
     padding: 10px 23px;
 }
 
+.btn {
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 5px 13px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: #424242;
+    background-color: #deebfe;
+    cursor: pointer;
+    
+    border: none;
+    outline: none;
+
+    margin-left: auto;
+}
+
+.btn span {
+    width: 20px;
+    height: 20px;
+    background: url('../../assets/icons/link-outline.svg');
+    transform: rotate(90deg);
+}
+
+.btn span.copied {
+    background: url('../../assets/icons/checkmark.svg');
+    transform: rotate(0deg);
+    animation-name: jump;
+    animation-duration: 0.3s;
+}
+
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .article {
         padding: 10px;
@@ -169,5 +217,15 @@
     }
     .link:hover {
         padding: 5px 23px;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .btn span {
+        width: 15px;
+        height: 15px;
     }
 }
