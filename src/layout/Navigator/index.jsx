@@ -4,7 +4,7 @@ import { SearchBar, SectionLink } from '@/components';
 
 const Navigator = ({ sectionData }) => {
   return (
-    <div className={styles.navigator}>
+    <div id="nav" className={styles.navigator}>
       <SearchBar />
       <nav className={`${styles.articlesSectionLinks}`}>
         <SectionLink

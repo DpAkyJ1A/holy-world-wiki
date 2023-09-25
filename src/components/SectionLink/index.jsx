@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './sectionLink.module.css';
 import { NavLink, useLocation } from 'react-router-dom';
+import { scrollToTop } from '@/utils/helpers/helpers';
 
 export const ArticleLink = ({ article, baseUrl }) => {
   const articleUrl = `${baseUrl}${article.articleAddress}`;
@@ -9,6 +10,7 @@ export const ArticleLink = ({ article, baseUrl }) => {
     <NavLink
       to={articleUrl}
       className={({ isActive }) => (isActive ? styles.active : '')}
+      onClick={scrollToTop}
     >
       <div className={`${styles.article} ${styles.sectionLink}`}>
         <div className={styles.row}>
@@ -74,6 +76,7 @@ const index = ({ mode, address, section }) => {
         end
         to={address}
         className={({ isActive }) => (isActive ? styles.active : '')}
+        onClick={scrollToTop}
       >
         <div className={`${styles.homeSectionLink} ${styles.sectionLink}`}>
           <div className={styles.row}>

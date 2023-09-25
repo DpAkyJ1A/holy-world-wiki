@@ -24,3 +24,7 @@ export const getAllAddresses = (obj) => {
 
   return addressesArray;
 }
+
+export const scrollToTop = () => {
+  window.location.href = '#nav';
+};

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './article.module.css'
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '@/utils/helpers/helpers';
 
 const Article = ({ sectionData }) => {
   const [article, setArticle] = useState(null);
@@ -23,10 +24,6 @@ const Article = ({ sectionData }) => {
       if (article) {
         setArticle(article);
       }
-
-      // let unlisten = history.listen((location) => {
-      //   console.log(location.hash); // <-- переданный в Link hash.
-      // });
     }
   }, [curLocation]);
 
@@ -112,8 +109,8 @@ const Article = ({ sectionData }) => {
               ) : el.element === 'link' ? (
                 <Link
                   to={el.to}
-                  hash="#articleName"
                   className={styles.link}
+                  onClick={scrollToTop}
                   key={`article element ${i}`}
                 >
                   {el.value}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styles from './button.module.css'
+import { scrollToTop } from '@/utils/helpers/helpers';
 
 const index = () => {
   const SCROLLMAX = 1500;
@@ -12,10 +13,6 @@ const index = () => {
     } else if (scrolled <= SCROLLMAX) {
       setVisible(false);
     }
-  };
-
-  const scrollToTop = () => {
-    window.location.href = '#article';
   };
 
   window.addEventListener('scroll', toggleVisible);
