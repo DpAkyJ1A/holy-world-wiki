@@ -138,7 +138,7 @@ const Article = ({ sectionData }) => {
             setCopied(true);
           }}
         >
-          <span className={copied && styles.copied}></span>Link
+          <span className={copied ? styles.copied : undefined}></span>Link
         </button>
       </div>
     </article>

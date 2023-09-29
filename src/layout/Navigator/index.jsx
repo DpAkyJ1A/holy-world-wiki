@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './navigator.module.css'
-import { SearchBar, SectionLink } from '@/components';
+import { useSearch } from '@/utils/hooks/useSearch';
+import { SearchBar, SectionLink, SearchLinks } from '@/components';
 
 const Navigator = ({ sectionData }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const links = useSearch(searchQuery, sectionData);
+
   return (
     <div id="nav" className={styles.navigator}>
-      <SearchBar />
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <SearchLinks links={links} setSearchQuery={setSearchQuery} />
       <nav className={`${styles.articlesSectionLinks}`}>
         <SectionLink
           mode="home"
