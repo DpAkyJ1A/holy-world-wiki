@@ -13,6 +13,17 @@
   border-radius: 4px;
 }
 
+.searchLinks>p {
+  font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: #424242;
+
+    padding-left: 10px;
+    box-shadow: 0px 4px 10px 4px rgba(34, 60, 80, 0.2);
+}
+
 .searchLinks a {
   display: flex;
   flex-direction: column;

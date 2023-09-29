@@ -10,7 +10,11 @@ const Navigator = ({ sectionData }) => {
   return (
     <div id="nav" className={styles.navigator}>
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <SearchLinks links={links} setSearchQuery={setSearchQuery} />
+      <SearchLinks
+        links={links}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+      />
       <nav className={`${styles.articlesSectionLinks}`}>
         <SectionLink
           mode="home"
