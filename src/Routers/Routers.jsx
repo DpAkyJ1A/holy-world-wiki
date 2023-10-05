@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { useState } from 'react';
-import { Home } from '@/pages';
+import { Home, Error } from '@/pages';
 import { HolyWorldWikiHome, classicAndSpeedrun, liteAnarchy } from '../db/data';
 import { getAllAddresses } from '../utils/helpers/helpers';
 
@@ -44,7 +44,7 @@ const Routers = () => {
             />
           ))}
 
-          {/* <Route path="*" element={<ErrorPage />} /> */}
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </div>

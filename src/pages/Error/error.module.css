@@ -1,0 +1,77 @@
+.errorWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8fafc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url('../../assets/img/server.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fadeOut {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.errorContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorContent h2 {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.errorContent h3 {
+  color: #fff;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.errorContent a {
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  text-decoration: underline;
+
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .errorContent h2 {
+    font-size: 16px;
+  }
+
+  .errorContent h3 {
+    font-size: 35px;
+  }
+
+  .errorContent a {
+    font-size: 20px;
+  }
+}
