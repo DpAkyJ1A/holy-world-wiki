@@ -5,7 +5,9 @@ import { GameModeButton } from '@/components';
 
 const Header = () => {
   const [maxOnline, setMaxOnline] = useState(10000);
-  const [currentOnline, setCurrentOnline] = useState(0);
+  const [currentOnline, setCurrentOnline] = useState(
+    localStorage.getItem('online') || '–'
+  );
 
   const getOnline = (serverIp, serverPort) => {
     fetch(
@@ -14,7 +16,8 @@ const Header = () => {
       .then((response) => response.json())
       .then((data) => {
         setMaxOnline(data?.players?.max || 10000);
-        setCurrentOnline(data?.players?.now || 0);
+        setCurrentOnline(data?.players?.now || '–');
+        localStorage.setItem('online', data?.players?.now);
       });
   };
 

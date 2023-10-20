@@ -49,6 +49,8 @@
 }
 
 .onlineValue {
+    /* display: inline-block;
+    width: 135px; */
     color: var(--main-font-color);
     transition: color var(--transition-duration) var(--transition-timing-function);
 
