@@ -6,3 +6,25 @@
   flex-direction: column;
   align-items: center;
 }
+
+.app {
+  --main-bg-color: #f8fafc;
+  --secondary-bg-color: #fff;
+  --main-font-color: #000;
+  --color-blue: #e9f0fa;
+
+  --transition-timing-function: ease-in-out;
+  --transition-duration: 0.3s;
+}
+
+.app.dark-theme {
+  --main-bg-color: #121212;
+  --secondary-bg-color: #1e1e1e;
+  --main-font-color: #f8fafc;
+  --color-blue: #d2d8e1;
+}
+
+.app {
+  background-color: var(--main-bg-color);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+}

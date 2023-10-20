@@ -8,13 +8,10 @@
     justify-content: space-between;
 }
 
-.homeLink {
-    text-decoration: none;
-    color: black;
-}
-
 .appName {
-    color: #000;
+    color: var(--main-font-color);
+    transition: color var(--transition-duration) var(--transition-timing-function);
+
     font-size: 27px;
     font-style: normal;
     font-weight: 800;
@@ -27,7 +24,9 @@
     align-items: center;
     padding: 10px;
     border-radius: 34px;
-    background-color: white;
+    
+    background-color: var(--secondary-bg-color);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .onlineWrapper {
@@ -38,8 +37,11 @@
     cursor: pointer;
 }
 
-.online {
-    color: rgba(0, 0, 0, 0.50);
+.onlineText {
+    color: var(--main-font-color);
+    opacity: 0.5;
+    transition: color var(--transition-duration) var(--transition-timing-function);
+
     font-size: 19px;
     font-style: normal;
     font-weight: 600;
@@ -47,7 +49,9 @@
 }
 
 .onlineValue {
-    color: #000;
+    color: var(--main-font-color);
+    transition: color var(--transition-duration) var(--transition-timing-function);
+
     font-size: 19px;
     font-style: normal;
     font-weight: 600;
@@ -82,7 +86,7 @@
 }
 
 .serverIp::before {
-    background: #e9f0fa;
+    background: var(--color-blue);
     border-radius: 33px;
     bottom: 0;
     content: "";

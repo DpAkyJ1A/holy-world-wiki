@@ -3,6 +3,7 @@ import styles from './article.module.css'
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { scrollToTop } from '@/utils/helpers/helpers';
+import { ThemeChanger } from '@/components';
 
 const Article = ({ sectionData }) => {
   const [article, setArticle] = useState(null);
@@ -35,9 +36,14 @@ const Article = ({ sectionData }) => {
 
   return (
     <article id="article" className={styles.article}>
-      <h2 id="article-name" className={styles.articleName}>
-        {article.articleName}
-      </h2>
+      <div className={styles.articleHeader}>
+        <h2 id="article-name" className={styles.articleName}>
+          {article.articleName}
+        </h2>
+        <div className={styles.controls}>
+          <ThemeChanger />
+        </div>
+      </div>
       {article.articleContent && <hr></hr>}
       <div className={styles.articleContent}>
         {article.articleContent

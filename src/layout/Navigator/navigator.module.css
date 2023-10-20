@@ -7,7 +7,8 @@
     padding: 21px;
     border-radius: 24px;
 
-    background: #fff;
+    background-color: var(--secondary-bg-color);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
     position: relative;
 }
 

@@ -29,7 +29,9 @@
     border-radius: 34px;
     padding: 10px;
     gap: 10px;
-    background-color: #fff;
+    
+    background-color: var(--secondary-bg-color);
+    transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .whiteWrapper a {

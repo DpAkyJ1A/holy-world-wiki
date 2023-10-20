@@ -39,7 +39,7 @@ const Header = () => {
           className={styles.onlineWrapper}
         >
           <p className={styles.online}>
-            Онлайн
+            <span className={styles.onlineText}>Онлайн</span>
             <span className={styles.onlineValue}>
               {currentOnline} / {maxOnline}
             </span>
