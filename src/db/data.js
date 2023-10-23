@@ -2,6 +2,7 @@ import { BOSSES } from './articles/bosses';
 import { BOURGEOISDESCRIPTION } from './articles/bourgeoisDescription';
 import { CHALLENGESDESCRIPTION } from './articles/challengesDescription';
 import { CLANS } from './articles/clans';
+import { CLASSICANDSPEEDRUNHOME } from './articles/classicAndSpeedrunHome';
 import { COINSFROMMOBS } from './articles/coinsFromMobs';
 import { ENDLESSTRADING } from './articles/endlessTrading';
 import { EVENTSCHEDULE } from './articles/eventSchedule';
@@ -34,19 +35,7 @@ export const HolyWorldWikiHome = {
 
 export const classicAndSpeedrun = {
   baseAddress: '/classic-and-speedrun',
-  homePage: {
-    articleName: 'Классик и спидран',
-    articleData: [
-      {
-        subHeader: 'Анархия классик',
-        text: 'Классическая Анархия является режимом с множеством возможностей во всех существующих отраслях: здесь можно и гриферить базы, получая целые горы эмоций и, разумеется, не меньше ресурсов; и вступать в жесточайшие схватки во время фирменных ивентов, которых существует целых 4 штуки и которые в течение дня проходят целых 20 раз; и попробовать заработать миллионы, или даже миллиарды монеток, взаимодействуя с нашим торговым персонажем Буржуем или же занимаясь активной торговлей с игроками через аукцион - в общем и целом не зайти и не начать развиваться абсолютно нельзя!',
-      },
-      {
-        subHeader: 'Анархия спидран',
-        text: 'Спидран Анархия представляет из себя режим, на котором всё упирается в скорость развития: с первых минут вайпа можно заполучить награды за то, что ты быстрее других: убить дракона, первым заработать миллион или же первым пройти Буржуя - за всё это можно заработать горы рубинов. Если вам и этого мало, то в течение вайпа каждую неделю за заработок монет можно дополнительно заработать с несколько десятков тысяч рубинов, но если вдруг и этого не достаточно - имейте в виду, что без постройки базы и фермы заработать ничего не получится, а следовательно гриферство также никто не отменял.. Одним словом - непременно залетайте и начинайте свой спидран по Спидрану!',
-      },
-    ],
-  },
+  homePage: CLASSICANDSPEEDRUNHOME,
   sections: [
     {
       sectionName: 'PVP',

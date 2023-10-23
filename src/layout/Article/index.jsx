@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import styles from './article.module.css'
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { scrollToTop } from '@/utils/helpers/helpers';
-import { ThemeChanger } from '@/components';
+import { LanguageSwitcher, ThemeChanger } from '@/components';
 
 const Article = ({ sectionData }) => {
   const [article, setArticle] = useState(null);
   const [copied, setCopied] = useState(false);
+  const language = useSelector((state) => state.lang);
   const curLocation = useLocation();
 
   useEffect(() => {
@@ -38,13 +40,16 @@ const Article = ({ sectionData }) => {
     <article id="article" className={styles.article}>
       <div className={styles.articleHeader}>
         <h2 id="article-name" className={styles.articleName}>
-          {article.articleName}
+          {article.articleName[language] || article.articleName}
         </h2>
         <div className={styles.controls}>
           <ThemeChanger />
+          <LanguageSwitcher />
         </div>
       </div>
-      {article.articleContent && <hr></hr>}
+
+      {article.articleContent[0]?.element !== 'h3' && <hr></hr>}
+
       <div className={styles.articleContent}>
         {article.articleContent
           ? article.articleContent.map((el, i) =>
@@ -59,7 +64,9 @@ const Article = ({ sectionData }) => {
               ) : el.element === 'p' ? (
                 <p
                   className={styles.p}
-                  dangerouslySetInnerHTML={{ __html: el.value }}
+                  dangerouslySetInnerHTML={{
+                    __html: el.value[language] || el.value,
+                  }}
                   style={el.style}
                   key={`article element ${i}`}
                 ></p>
@@ -67,7 +74,7 @@ const Article = ({ sectionData }) => {
                 <>
                   <hr></hr>
                   <h3 className={styles.h3} key={`article element ${i}`}>
-                    {el.value}
+                    {el.value[language] || el.value}
                   </h3>
                 </>
               ) : el.element === 'h4' ? (
@@ -75,7 +82,9 @@ const Article = ({ sectionData }) => {
                   <div className={styles.row} key={`article element ${i}`}>
                     <h4
                       className={styles.h4}
-                      dangerouslySetInnerHTML={{ __html: el.value }}
+                      dangerouslySetInnerHTML={{
+                        __html: el.value[language] || el.value,
+                      }}
                     ></h4>
                     <img
                       src={el.additionImg.src}
@@ -87,7 +96,9 @@ const Article = ({ sectionData }) => {
                 ) : (
                   <h4
                     className={styles.h4}
-                    dangerouslySetInnerHTML={{ __html: el.value }}
+                    dangerouslySetInnerHTML={{
+                      __html: el.value[language] || el.value,
+                    }}
                     key={`article element ${i}`}
                   ></h4>
                 )
@@ -121,7 +132,7 @@ const Article = ({ sectionData }) => {
                   onClick={scrollToTop}
                   key={`article element ${i}`}
                 >
-                  {el.value}
+                  {el.value[language] || el.value}
                 </Link>
               ) : el.element === 'hr' ? (
                 <hr></hr>

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from './sectionLink.module.css';
 import { NavLink, useLocation } from 'react-router-dom';
 import { scrollToTop } from '@/utils/helpers/helpers';
+import { useSelector } from 'react-redux';
 
 export const ArticleLink = ({ article, baseUrl }) => {
   const articleUrl = `${baseUrl}${article.articleAddress}`;
+  const language = useSelector((state) => state.lang);
 
   return (
     <NavLink
@@ -15,10 +17,7 @@ export const ArticleLink = ({ article, baseUrl }) => {
       <div className={`${styles.article} ${styles.sectionLink}`}>
         <div className={styles.row}>
           {/* <div></div> */}
-          <p>{article.articleName}</p>
-          {/* <marquee direction="left" scrollamount="5">
-            {article.articleName}
-          </marquee> */}
+          <p>{article.articleName[language] || article.articleName}</p>
         </div>
       </div>
     </NavLink>
@@ -30,6 +29,7 @@ const SubSection = ({ subSection, baseUrl }) => {
   const subSectionUrl = `${baseUrl}${subSection.sectionAddress}`;
   const [isOpen, setIsOpen] = useState(false);
   const [isAnyArticleSelected, setIsAnyArticleSelected] = useState(false);
+  const language = useSelector((state) => state.lang);
 
   const curLocation = useLocation();
   useEffect(() => {
@@ -52,16 +52,12 @@ const SubSection = ({ subSection, baseUrl }) => {
         </div>
         <div className={styles.arrowIcon}></div>
       </div>
-      <div
-        className={`${styles.articles} ${
-          isOpen ? styles.open : ''
-        }`}
-      >
+      <div className={`${styles.articles} ${isOpen ? styles.open : ''}`}>
         {subSection.articles.map((article, i) => (
           <ArticleLink
             article={article}
             baseUrl={subSectionUrl}
-            key={article.articleName}
+            key={article.articleName.en || article.articleName}
           />
         ))}
       </div>
@@ -70,6 +66,8 @@ const SubSection = ({ subSection, baseUrl }) => {
 };
 
 const index = ({ mode, address, section }) => {
+  const language = useSelector((state) => state.lang);
+  
   if (mode === 'home') {
     return (
       <NavLink
@@ -81,7 +79,7 @@ const index = ({ mode, address, section }) => {
         <div className={`${styles.homeSectionLink} ${styles.sectionLink}`}>
           <div className={styles.row}>
             <div></div>
-            <p>{section.articleName}</p>
+            <p>{section.articleName[language] || section.articleName}</p>
           </div>
         </div>
       </NavLink>
