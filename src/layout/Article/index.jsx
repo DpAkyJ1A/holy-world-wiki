@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import styles from './article.module.css'
 import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
-import { scrollToTop } from '@/utils/helpers/helpers';
 import { LanguageSwitcher, ThemeChanger } from '@/components';
+import getJsx from './getJsx';
 
 const Article = ({ sectionData }) => {
   const [article, setArticle] = useState(null);
@@ -14,6 +13,7 @@ const Article = ({ sectionData }) => {
 
   useEffect(() => {
     setCopied(false);
+
     if (curLocation.pathname === sectionData.baseAddress) {
       setArticle(sectionData.homePage);
     } else {
@@ -48,106 +48,22 @@ const Article = ({ sectionData }) => {
         </div>
       </div>
 
-      {article.articleContent[0]?.element !== 'h3' && <hr></hr>}
+      {article.articleContent &&
+        article.articleContent[0]?.element !== 'h3' && <hr></hr>}
 
       <div className={styles.articleContent}>
         {article.articleContent
-          ? article.articleContent.map((el, i) =>
-              el.element === 'img' ? (
-                <img
-                  src={el.src}
-                  alt={el.alt}
-                  style={el.style}
-                  className={styles.img}
-                  key={`article element ${i}`}
-                />
-              ) : el.element === 'p' ? (
-                <p
-                  className={styles.p}
-                  dangerouslySetInnerHTML={{
-                    __html: el.value[language] || el.value,
-                  }}
-                  style={el.style}
-                  key={`article element ${i}`}
-                ></p>
-              ) : el.element === 'h3' ? (
-                <>
-                  <hr></hr>
-                  <h3 className={styles.h3} key={`article element ${i}`}>
-                    {el.value[language] || el.value}
-                  </h3>
-                </>
-              ) : el.element === 'h4' ? (
-                el.additionImg ? (
-                  <div className={styles.row} key={`article element ${i}`}>
-                    <h4
-                      className={styles.h4}
-                      dangerouslySetInnerHTML={{
-                        __html: el.value[language] || el.value,
-                      }}
-                    ></h4>
-                    <img
-                      src={el.additionImg.src}
-                      alt={el.additionImg.alt}
-                      style={el.additionImg.style}
-                      className={styles.additionalImg}
-                    ></img>
-                  </div>
-                ) : (
-                  <h4
-                    className={styles.h4}
-                    dangerouslySetInnerHTML={{
-                      __html: el.value[language] || el.value,
-                    }}
-                    key={`article element ${i}`}
-                  ></h4>
-                )
-              ) : el.element === 'ol' ? (
-                <ol className={styles.ol} key={`article element ${i}`}>
-                  {el.li.map((str) => (
-                    <li
-                      key={str}
-                      dangerouslySetInnerHTML={{ __html: str }}
-                    ></li>
-                  ))}
-                </ol>
-              ) : el.element === 'ul' ? (
-                <ul
-                  className={`${styles.ul} ${
-                    el.className === 'dashList' ? styles.dashList : ''
-                  }`}
-                  key={`article element ${i}`}
-                >
-                  {el.li.map((str) => (
-                    <li
-                      key={str}
-                      dangerouslySetInnerHTML={{ __html: str }}
-                    ></li>
-                  ))}
-                </ul>
-              ) : el.element === 'link' ? (
-                <Link
-                  to={el.to}
-                  className={styles.link}
-                  onClick={scrollToTop}
-                  key={`article element ${i}`}
-                >
-                  {el.value[language] || el.value}
-                </Link>
-              ) : el.element === 'hr' ? (
-                <hr></hr>
-              ) : (
-                <></>
-              )
-            )
+          ? article.articleContent.map((el, i) => getJsx(el, i, language))
           : article.articleData.map((el) => (
               <section className={styles.section} key={el.subHeader}>
                 <hr></hr>
                 <h3 className={styles.sectionName}>{el.subHeader}</h3>
                 <p className={styles.sectionText}>{el.text}</p>
               </section>
-            ))}
+          ))}
+        
         <hr></hr>
+
         <button
           className={styles.btn}
           onClick={() => {
