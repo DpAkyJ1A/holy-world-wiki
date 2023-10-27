@@ -72,7 +72,7 @@ const Article = ({ sectionData }) => {
           }}
         >
           <span className={copied ? styles.copied : undefined}></span>
-          {language === 'uk' ? 'Ссилка' : 'Ссылка'}
+          {language === 'uk' ? 'Посилання' : 'Ссылка'}
         </button>
       </div>
     </article>
