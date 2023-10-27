@@ -43,8 +43,8 @@ const Article = ({ sectionData }) => {
           {article.articleName[language] || article.articleName}
         </h2>
         <div className={styles.controls}>
-          <ThemeChanger />
           <LanguageSwitcher />
+          <ThemeChanger />
         </div>
       </div>
 
