@@ -60,8 +60,8 @@ const Article = ({ sectionData }) => {
                 <h3 className={styles.sectionName}>{el.subHeader}</h3>
                 <p className={styles.sectionText}>{el.text}</p>
               </section>
-          ))}
-        
+            ))}
+
         <hr></hr>
 
         <button
@@ -71,7 +71,8 @@ const Article = ({ sectionData }) => {
             setCopied(true);
           }}
         >
-          <span className={copied ? styles.copied : undefined}></span>Ссылка
+          <span className={copied ? styles.copied : undefined}></span>
+          {language === 'uk' ? 'Ссилка' : 'Ссылка'}
         </button>
       </div>
     </article>

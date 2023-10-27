@@ -48,7 +48,7 @@ const SubSection = ({ subSection, baseUrl }) => {
       >
         <div className={styles.row}>
           {/* <div></div> */}
-          <p>{subSection.sectionName}</p>
+          <p>{subSection.sectionName[language] || subSection.sectionName}</p>
         </div>
         <div className={styles.arrowIcon}></div>
       </div>
@@ -57,7 +57,7 @@ const SubSection = ({ subSection, baseUrl }) => {
           <ArticleLink
             article={article}
             baseUrl={subSectionUrl}
-            key={article.articleName.en || article.articleName}
+            key={article.articleName.ru || article.articleName}
           />
         ))}
       </div>
@@ -101,26 +101,22 @@ const index = ({ mode, address, section }) => {
     <>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className={`${styles.sectionLink} ${
-          isOpen ? styles.open : ''
-        } ${isAnySubSectionSelected ? styles.active : ''}`}
+        className={`${styles.sectionLink} ${isOpen ? styles.open : ''} ${
+          isAnySubSectionSelected ? styles.active : ''
+        }`}
       >
         <div className={styles.row}>
           {/* <div></div> */}
-          <p>{section.sectionName}</p>
+          <p>{section.sectionName[language] || section.sectionName}</p>
         </div>
         <div className={styles.arrowIcon}></div>
       </div>
-      <div
-        className={`${styles.subsections} ${
-          isOpen ? styles.open : ''
-        }`}
-      >
+      <div className={`${styles.subsections} ${isOpen ? styles.open : ''}`}>
         {section.subsections.map((subsection) => (
           <SubSection
             subSection={subsection}
             baseUrl={setionUrl}
-            key={subsection.sectionName}
+            key={subsection.sectionName.ru || subsection.sectionName}
           />
         ))}
       </div>

@@ -42,18 +42,20 @@ export const classicAndSpeedrun = {
       sectionAddress: '/pvp',
       subsections: [
         {
-          sectionName: 'Кланы',
+          sectionName: {
+            ru: 'Кланы',
+            uk: 'Клани',
+          },
           sectionAddress: '/clans',
           articles: [CLANS],
         },
         {
-          sectionName: 'Ивенты',
+          sectionName: {
+            ru: 'Ивенты',
+            uk: 'Івенти',
+          },
           sectionAddress: '/events',
-          articles: [
-            EVENTSCHEDULE,
-            BOSSES,
-            SANCTUOUSJACOB
-          ],
+          articles: [EVENTSCHEDULE, BOSSES, SANCTUOUSJACOB],
         },
       ],
     },
@@ -62,41 +64,44 @@ export const classicAndSpeedrun = {
       sectionAddress: '/pve',
       subsections: [
         {
-          sectionName: 'Буржуй',
+          sectionName: {
+            ru: 'Буржуй',
+            uk: 'Буржуа',
+          },
           sectionAddress: '/bourgeois',
-          articles: [
-            BOURGEOISDESCRIPTION,
-            ENDLESSTRADING,
-            PRICESINFO,
-          ],
+          articles: [BOURGEOISDESCRIPTION, ENDLESSTRADING, PRICESINFO],
         },
         {
-          sectionName: 'Уникальные данжи',
+          sectionName: {
+            ru: 'Уникальные данжи',
+            uk: 'Унікальні данжи',
+          },
           sectionAddress: '/unique_dungeons',
-          articles: [
-            UNIQUEDUNGEONS
-          ],
+          articles: [UNIQUEDUNGEONS],
         },
         {
-          sectionName: 'Рассадники',
+          sectionName: {
+            ru: 'Рассадники',
+            uk: 'Розсадники',
+          },
           sectionAddress: '/spawners',
-          articles: [
-            SPAWNERS,
-          ],
+          articles: [SPAWNERS],
         },
         {
-          sectionName: 'Мобы и монетки',
+          sectionName: {
+            ru: 'Мобы и монетки',
+            uk: 'Моби і монетки',
+          },
           sectionAddress: '/mobs_and_coins',
-          articles: [
-            COINSFROMMOBS,
-          ],
+          articles: [COINSFROMMOBS],
         },
         {
-          sectionName: 'Боевой пропуск',
+          sectionName: {
+            ru: 'Боевой пропуск',
+            uk: 'Бойова перепустка',
+          },
           sectionAddress: '/battle_pass',
-          articles: [
-            CHALLENGESDESCRIPTION,
-          ],
+          articles: [CHALLENGESDESCRIPTION],
         },
       ],
     },

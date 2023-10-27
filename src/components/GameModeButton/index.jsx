@@ -1,8 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import styles from './button.module.css'
 import { NavLink } from 'react-router-dom';
 
-const index = ({gameMode}) => {
+const index = ({ gameMode }) => {
+  const language = useSelector((state) => state.lang);
+  
   if (gameMode === 'classicAndSpeedrun') {
     return (
       <NavLink
@@ -12,7 +15,9 @@ const index = ({gameMode}) => {
         }
       >
         <div className={styles.classicAndSpeedrunImg}></div>
-        <p className={styles.classicAndSpeedrunP}>Классик и Спидран</p>
+        <p className={styles.classicAndSpeedrunP}>
+          {language === 'uk' ? 'Класик и Спідран' : 'Классик и Спидран'}
+        </p>
       </NavLink>
     );
   } else if (gameMode === 'liteAnarchy') {
@@ -24,7 +29,9 @@ const index = ({gameMode}) => {
         }
       >
         <div className={styles.liteAnarchyImg}></div>
-        <p className={styles.liteAnarchyP}>Лайт Анархия</p>
+        <p className={styles.liteAnarchyP}>
+          {language === 'uk' ? 'Лайт Анархія' : 'Лайт Анархия'}
+        </p>
       </NavLink>
     );
   } else {
