@@ -36,12 +36,10 @@
     
     border: none;
     outline: none;
-
-    transition: padding 0.25s ease;
 }
 
-.searchLinks a:hover {
-  padding: 5px 23px;
+.searchLinks a:hover * {
+  transform: translate(7px, 0);
 }
 
 .searchLinks a h3 {
@@ -50,11 +48,13 @@
     font-weight: 400;
     line-height: 28px;
     color: #424242;
+    transition: transform 0.25s ease;
 }
 
 .searchLinks a p {
   color: gray;
   font-size: 16px;
+  transition: transform 0.25s ease;
 }
 
 @media screen and (max-width: 768px) {
