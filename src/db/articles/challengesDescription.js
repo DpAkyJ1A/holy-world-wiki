@@ -15,97 +15,103 @@ import challengesDescription13 from '../../assets/img/challenges-description-13.
 import challengesDescriptionAllRewards from '../../assets/img/challenges-description-all-rewards.jpg';
 
 export const CHALLENGESDESCRIPTION = {
-  articleName:
-    'Описание челленджей /daily - все задания, особенности и награды',
+  articleName: {
+    ru: 'Описание челленджей /daily - все задания, особенности и награды',
+    uk: 'Опис челенджів /daily - всі завдання, особливості та нагороди',
+    en: '',
+  },
   articleAddress: '/challenges_description',
   articleContent: [
     {
       element: 'img',
       src: challengesDescription1,
-      alt: 'Задания 1-4',
+      alt: { ru: 'Задания 1-4', uk: 'Завдання 1-4', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription2,
-      alt: 'Задания 5-8',
+      alt: { ru: 'Задания 5-8', uk: 'Завдання 5-8', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription3,
-      alt: 'Задания 9-12',
+      alt: { ru: 'Задания 9-12', uk: 'Завдання 9-12', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription4,
-      alt: 'Задания 13-16',
+      alt: { ru: 'Задания 13-16', uk: 'Завдання 13-16', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription5,
-      alt: 'Задания 17-20',
+      alt: { ru: 'Задания 17-20', uk: 'Завдання 17-20', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription6,
-      alt: 'Задания 21-24',
+      alt: { ru: 'Задания 21-24', uk: 'Завдання 21-24', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription7,
-      alt: 'Задания 25-28',
+      alt: { ru: 'Задания 25-28', uk: 'Завдання 25-28', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription8,
-      alt: 'Задания 29-32',
+      alt: { ru: 'Задания 29-32', uk: 'Завдання 29-32', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription9,
-      alt: 'Задания 33-36',
+      alt: { ru: 'Задания 33-36', uk: 'Завдання 33-36', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription10,
-      alt: 'Задания 37-40',
+      alt: { ru: 'Задания 37-40', uk: 'Завдання 37-40', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription11,
-      alt: 'Задания 41-44',
+      alt: { ru: 'Задания 41-44', uk: 'Завдання 41-44', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription12,
-      alt: 'Задания 45-48',
+      alt: { ru: 'Задания 45-48', uk: 'Завдання 45-48', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'img',
       src: challengesDescription13,
-      alt: 'Задания 49-50',
+      alt: { ru: 'Задания 49-50', uk: 'Завдання 49-50', en: '' },
       style: { width: '100%' },
     },
     {
       element: 'p',
-      value:
-        'Таким образом, пройдя все челленджи, вы по итогу можете получить целое море разных достаточно полезных наград, а если у вас ещё и есть Боевой пропуск - вас с уверенностью можно называть настоящим миллиардером!',
+      value: {
+        ru: 'Таким образом, пройдя все челленджи, вы по итогу можете получить целое море разных достаточно полезных наград, а если у вас ещё и есть Боевой пропуск — вас с уверенностью можно называть настоящим миллиардером!',
+        uk: 'Отже, пройшовши всі челенджі, ви в кінці можите отримати ціле море різних достатньо корисних нагород, а якщо у вас ще й є Бойовий пропуск — вас з упевненістю можна називати справжнім мільярдером!',
+        en: '',
+      },
     },
     {
       element: 'img',
       src: challengesDescriptionAllRewards,
-      alt: 'Все награды',
+      alt: { ru: 'Все награды', uk: 'Всі нагороди', en: '' },
       style: { width: '100%' },
     },
   ],
