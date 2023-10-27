@@ -20,6 +20,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .articleName {
@@ -189,6 +191,12 @@
         padding: 10px;
         border-radius: 13px;
     }
+    .articleHeader {
+        gap: 10px;
+    }
+    .controls {
+        gap: 10px;
+    }
     .img {
         width: 100% !important;
     }
@@ -231,5 +239,16 @@
     .btn span {
         width: 15px;
         height: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .articleHeader {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .controls {
+        align-self:flex-end;
     }
 }

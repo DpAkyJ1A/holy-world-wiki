@@ -15,7 +15,7 @@
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: -2px;
+  left: 0;
   right: 0;
   bottom: 0;
   background: #ebebeb;
@@ -28,7 +28,7 @@
   content: "";
   height: 36px;
   width: 36px;
-  left: -1px;
+  left: -2px;
   bottom: 4px;
   top: 0;
   bottom: 0;
@@ -78,21 +78,54 @@ input:checked + .slider:after {
 }
 
 .uk {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
   right: 5px;
 }
 
 .ru {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 3px;
+  left: 5px;
 }
 
 .uk, .ru {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
   color: black;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .switch {
+    --scale-coef: 0.8;
+    width: calc(65px * var(--scale-coef));
+    height: calc(30px * var(--scale-coef));
+  }
+  .slider:before, .slider:after {
+    height: calc(36px * var(--scale-coef));
+    width: calc(36px * var(--scale-coef));
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(calc(33px * var(--scale-coef)));
+    -ms-transform: translateX(calc(33px * var(--scale-coef)));
+    transform: translateX(calc(33px * var(--scale-coef)));
+    background-color: var(--main-bg-color);
+  }
+
+  input:checked + .slider:after {
+    -webkit-transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+    -ms-transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+    transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+  }
+
+  .uk {
+    right: 4px;
+  }
+
+  .ru {
+    left: 3px;
+  }
+
+  .uk, .ru {
+    font-size: calc(1rem * var(--scale-coef));
+  }
 }

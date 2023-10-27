@@ -1,7 +1,7 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 65px;
   height: 30px;
 }
 
@@ -15,7 +15,7 @@
   position: absolute;
   cursor: pointer;
   top: 0;
-  left: -2px;
+  left: 0;
   right: 0;
   bottom: 0;
   background: #ebebeb;
@@ -28,7 +28,7 @@
   content: "";
   height: 36px;
   width: 36px;
-  left: 0px;
+  left: -2px;
   bottom: 4px;
   top: 0;
   bottom: 0;
@@ -51,10 +51,11 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(30px) rotate(360deg);
-  -ms-transform: translateX(30px) rotate(360deg);
-  transform: translateX(30px) rotate(360deg);
+  -webkit-transform: translateX(33px) rotate(360deg);
+  -ms-transform: translateX(33px) rotate(360deg);
+  transform: translateX(33px) rotate(360deg);
   background: url('https://i.ibb.co/FxzBYR9/night.png');
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--main-bg-color);
@@ -67,4 +68,23 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .switch {
+    --scale-coef: 0.8;
+    width: calc(65px * var(--scale-coef));
+    height: calc(30px * var(--scale-coef));
+  }
+
+  .slider:before, .slider:after {
+    height: calc(36px * var(--scale-coef));
+    width: calc(36px * var(--scale-coef));
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+    -ms-transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+    transform: translateX(calc(33px * var(--scale-coef))) rotate(360deg);
+  }
 }

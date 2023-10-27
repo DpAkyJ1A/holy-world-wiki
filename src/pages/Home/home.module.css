@@ -65,13 +65,13 @@
 @media screen and (max-width: 768px) {
   .maxContainer {
     max-width: 768px;
+    padding: 0 10px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .maxContainer {
     max-width: 600px;
-    padding: 0 10px;
   }
   .whiteWrapper {
     flex-direction: column;
