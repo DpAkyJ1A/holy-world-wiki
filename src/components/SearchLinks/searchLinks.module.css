@@ -13,6 +13,10 @@
   border-radius: 4px;
 }
 
+.searchLinks.empty {
+  display: none;
+}
+
 .searchLinks>p {
   font-size: 16px;
     font-style: normal;
@@ -60,5 +64,6 @@
 @media screen and (max-width: 768px) {
     .searchLinks {
         width: calc(100% - 20px);
+        top: 50px;
     }
 }

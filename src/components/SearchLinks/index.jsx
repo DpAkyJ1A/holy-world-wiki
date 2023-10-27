@@ -7,7 +7,11 @@ const index = ({ links, searchQuery, setSearchQuery }) => {
   const language = useSelector((state) => state.lang);
 
   return (
-    <div className={styles.searchLinks} onClick={() => setSearchQuery('')}>
+    <div
+      className={`${styles.searchLinks} ${links.length === 0 && searchQuery.length <= 2 ? styles.empty : undefined
+      }`}
+      onClick={() => setSearchQuery('')}
+    >
       {searchQuery.length > 2 && links.length === 0 ? (
         <p>
           {language === 'uk' ? 'Збігів не знайдено' : 'Совпадений не найдено'}
@@ -19,10 +23,16 @@ const index = ({ links, searchQuery, setSearchQuery }) => {
             <p>
               {el.matches}{' '}
               {el.matches === 1
-                ? language === 'uk' ? 'збіг' : 'совпадение'
+                ? language === 'uk'
+                  ? 'збіг'
+                  : 'совпадение'
                 : el.matches === 2 || el.matches === 3 || el.matches === 4
-                ? language === 'uk' ? 'збіги' : 'совпадения'
-                : language === 'uk' ? 'збігів' : 'совпадений'}
+                ? language === 'uk'
+                  ? 'збіги'
+                  : 'совпадения'
+                : language === 'uk'
+                ? 'збігів'
+                : 'совпадений'}
             </p>
           </Link>
         ))

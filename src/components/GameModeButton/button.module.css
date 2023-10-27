@@ -51,3 +51,18 @@
   font-weight: 600;
   line-height: 23px;
 }
+
+@media screen and (max-width: 768px) {
+  .btn {
+    width: calc(0.7 * 264px);
+    height: calc(0.7 * 72px);
+  }
+  .classicAndSpeedrunImg, .liteAnarchyImg {
+    width: calc(0.7 * 100px);
+    background-size: 70%;
+  }
+
+  .liteAnarchyImg {
+    background-size: 100%;
+  }
+}
