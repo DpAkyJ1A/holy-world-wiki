@@ -6,6 +6,8 @@ import { CLASSICANDSPEEDRUNHOME } from './articles/classicAndSpeedrunHome';
 import { COINSFROMMOBS } from './articles/coinsFromMobs';
 import { ENDLESSTRADING } from './articles/endlessTrading';
 import { EVENTSCHEDULE } from './articles/eventSchedule';
+import { HOME } from './articles/home';
+import { LITEANARCHYHOME } from './articles/liteAnarchyHome';
 import { PRICESINFO } from './articles/pricesInfo';
 import { SANCTUOUSJACOB } from './articles/sanctuousJacob';
 import { SPAWNERS } from './articles/spawners';
@@ -13,23 +15,7 @@ import { UNIQUEDUNGEONS } from './articles/uniqueDungeons';
 
 export const HolyWorldWikiHome = {
   baseAddress: '/',
-  homePage: {
-    articleName: 'HolyWorld Wiki',
-    articleData: [
-      {
-        subHeader: 'Задонать Джейку',
-        text: 'Джейку донатить очень здорово много денег ему дать!',
-      },
-      {
-        subHeader: 'Пожалуйста, дай денег Богдану',
-        text: 'Человек он не маленький и богом дан \n Так дай и ты ему немного денег, впадлу что-ли?',
-      },
-      {
-        subHeader: 'Что делать, если нету денег для Богдана?',
-        text: 'Продать органы или мать родную заложить и задонатить Джейку. \n Выбери режим игры, чтобы ознакомиться с изложенными статьями.',
-      },
-    ],
-  },
+  homePage: HOME,
   sections: [],
 };
 
@@ -110,14 +96,6 @@ export const classicAndSpeedrun = {
 
 export const liteAnarchy = {
   baseAddress: '/lite-anarchy',
-  homePage: {
-    articleName: 'Анархия лайт',
-    articleData: [
-      {
-        subHeader: 'Анархия лайт',
-        text: 'Представляет из себя Анархию с более простым, но не менее интересным развитием и процессом игры. Здесь можно взрывать регионы буквально под ноль, получать невозможные зачарования, приобрести донат с крутейшим набором, сходить в потную схватку с топовыми игроками – словом, возможностей и особенностей целое море, советуем изучить детальнее!',
-      },
-    ],
-  },
+  homePage: LITEANARCHYHOME,
   sections: [],
 };
