@@ -14,7 +14,11 @@ const index = ({ searchQuery, setSearchQuery }) => {
         className={styles.input}
         maxLength={20}
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        onChange={(e) =>
+          setSearchQuery(
+            e.target.value.replace(/[^A-Za-zА-Яа-яЁёІіЇїЄє\s]/g, '')
+          )
+        }
       ></input>
     </div>
   );
