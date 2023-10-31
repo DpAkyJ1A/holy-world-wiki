@@ -75,25 +75,32 @@
     left: 55px;
 }
 
-.vkLink {
+.youtubeLink {
     flex-direction: row-reverse;
     right: 55px;
 }
 
-.telegramIcon, .vkIcon {
+.telegramIcon, .youtubeIcon {
     width: 40px;
     height: 40px;
+
+    background-position: center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
 }
 
 .telegramIcon {
-    background-image: url('../../assets/icons/tg-logo.svg');
+    background-image: url('../../assets/icons/tg_logo.svg');
 }
 
-.vkIcon {
-    background-image: url('../../assets/icons/vk-logo.svg');
+.youtubeIcon {
+    background-image: url('../../assets/icons/logo-youtube.svg');
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
 }
 
-.vkColumn {
+.youtubeColumn {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -117,7 +124,7 @@
 }
 
 .tgLink:hover .telegramIcon,
-.vkLink:hover .vkIcon {
+.youtubeLink:hover .youtubeIcon {
     animation-name: jump;
     animation-duration: 0.3s;
 }
@@ -152,7 +159,7 @@
     .tgLink {
         left: 0;
     }
-    .vkLink {
+    .youtubeLink {
         right: 0;
     }
     .img {
@@ -169,7 +176,7 @@
         bottom: 10px;
         transform: unset;
     }
-    .vkLink {
+    .youtubeLink {
         left: unset;
         right: 10px;
         bottom: unset;

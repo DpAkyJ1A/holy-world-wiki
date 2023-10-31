@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './links.module.css'
-import { Link } from 'react-router-dom';
 
 const Links = () => {
   const [imageOffset, setImageOffset] = useState({
@@ -40,6 +39,44 @@ const Links = () => {
     });
   };
 
+  const [tgSubs, setTgSubs] = useState(localStorage.getItem('HW_tg_subs') || '—');
+
+  useEffect(() => {
+    const getTgSubs = () => {
+      fetch('http://localhost:3000/getSubscribersTG')
+        .then((response) => response.json())
+        .then((data) => {
+          const subscribersCount = data.subscribersCount;
+          setTgSubs(subscribersCount);
+          localStorage.setItem('HW_tg_subs', subscribersCount);
+          // console.log(`Количество подписчиков: ${subscribersCount}`);
+        })
+        .catch((error) => console.error(error));
+    }
+
+    getTgSubs();
+  }, [])
+
+  const [youtubeSubs, setYoutubeSubs] = useState(
+    localStorage.getItem('HW_youtube_subs') || '—'
+  );
+
+  useEffect(() => {
+    const getYouTubeSubs = () => {
+      fetch('http://localhost:3000/getSubscribersYouTube')
+        .then((response) => response.json())
+        .then((data) => {
+          const subscribersCount = data.subscribersCount;
+          setYoutubeSubs(subscribersCount);
+          localStorage.setItem('HW_youtube_subs', subscribersCount);
+          // console.log(`Количество подписчиков: ${subscribersCount}`);
+        })
+        .catch((error) => console.error(error));
+    };
+
+    getYouTubeSubs();
+  }, []);
+
   return (
     <section
       onMouseMove={handleMouseMove}
@@ -60,17 +97,17 @@ const Links = () => {
           <div className={styles.telegramIcon}></div>
           <div className={styles.tgColumn}>
             <p className={styles.linkValue}>t.me/TheHolyWorld</p>
-            <p className={styles.subsCount}>4321 subscribers</p>
+            <p className={styles.subsCount}>{tgSubs} subscribers</p>
           </div>
         </div>
       </a>
 
-      <a href="https://vk.com/howorld" target="_blank">
-        <div className={`${styles.link} ${styles.vkLink}`}>
-          <div className={styles.vkIcon}></div>
-          <div className={styles.vkColumn}>
-            <p className={styles.linkValue}>vk.com/howorld</p>
-            <p className={styles.subsCount}>4321 subscribers</p>
+      <a href="https://www.youtube.com/@jake50" target="_blank">
+        <div className={`${styles.link} ${styles.youtubeLink}`}>
+          <div className={styles.youtubeIcon}></div>
+          <div className={styles.youtubeColumn}>
+            <p className={styles.linkValue}>youtube.com/@jake50</p>
+            <p className={styles.subsCount}>{youtubeSubs} subscribers</p>
           </div>
         </div>
       </a>
